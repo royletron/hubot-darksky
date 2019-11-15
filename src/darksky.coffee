@@ -56,7 +56,7 @@ lookupWeatherAndRespond = (msg, lat, lng, separator, geocoded_address) ->
         msg.send "#{result.error}"
         return
 
-      response = "Weather for #{geocoded_address} (Powered by DarkSky https://darksky.net/poweredby/)"
+      response = "Weather for #{geocoded_address}"
       response += "#{separator}Currently: #{result.currently.summary} #{result.currently.temperature}°C"
       response += "#{separator}Today: #{result.hourly.summary}"
       response += "#{separator}Coming week: #{result.daily.summary}"
