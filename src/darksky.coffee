@@ -32,7 +32,7 @@ module.exports = (robot) ->
 
     google_api_key = process.env.HUBOT_DARK_SKY_GOOGLE_MAPS_GEOCODING_API_KEY || ''
     google_url = "https://maps.googleapis.com/maps/api/geocode/json"
-    q = sensor: false, address: location, key: google_api_key
+    q = sensor: false, address: location + " UK", key: google_api_key
     msg.http(google_url)
       .query(q)
       .get() (err, res, body) ->
